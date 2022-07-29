@@ -1,0 +1,6 @@
+\begin{pspicture*}(-5,-5)(5,5)
+        \psframe*[linecolor=white](-5,-5)(5,5)
+        \psgrid[subgriddiv=0,gridcolor=lightgray,griddots=10]
+        \psElectricfield[Q={[1 2 0][1 1 1.732][1 -1 1.732][1 -2 0][1 -1 -1.732][1 1 -1.732][-1 0 0]},linecolor=red]
+        \psEquipotential[Q={[1 2 0][1 1 1.732 12][1 -1 1.732][1 -2 0][1 -1 -1.732][1 1 -1.732][-1 0 0]},Vmax=40,Vmin=-10,stepV=5,linecolor=blue](-5,-5)(5,5)
+    \end{pspicture*} 

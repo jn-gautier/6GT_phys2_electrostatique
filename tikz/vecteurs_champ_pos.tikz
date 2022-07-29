@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+\definecolor{NavyBlue}{HTML}{7279ff}
+\definecolor{DarkGreen}{HTML}{20ab2b}
+\tikzset{>=latex}
+\tkzInit[xstep=1 , ystep=1]
+\tkzInit[xmin=-2,xmax=2,ymin=-2,ymax=2]
+
+
+\tkzDefPoints{0/0/O, 1/0/A, 2/0/B, 3/0/C}
+
+\foreach \angle in {45,90,135,180,225,270,315,360}{
+\tkzDefPointBy[rotation=center O angle \angle](A)
+\tkzGetPoint{Q}
+\tkzDefPointBy[rotation=center O angle \angle](B)
+\tkzGetPoint{R}
+\tkzDrawSegment[->,color=black,thin](Q,R)}
+
+\foreach \angle in {45,90,135,180,225,270,315,360}{
+\tkzDefPointBy[rotation=center O angle \angle](C)
+\tkzGetPoint{R}
+\tkzDrawSegment[color=black,thin,loosely dashed](O,R)}
+
+\tkzDrawPoint[shading=ball,ball color=green,size=10,draw=none](O)
+\tkzLabelPoint(O){\textbf{+q}}
+
+
+\end{tikzpicture} 

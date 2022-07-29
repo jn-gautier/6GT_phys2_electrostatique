@@ -1,0 +1,95 @@
+%importation des packages
+\documentclass[11pt,twoside,DIV=calc]{scrbook}
+\usepackage{scrlayer-scrpage} %équivalent de fancyhdr pour kommascript
+\usepackage[french]{babel}
+\usepackage[babel=true]{csquotes} % csquotes va utiliser la langue définie dans babel
+\usepackage[shortlabels]{enumitem} %permet de faire \begin{enumerate}[a)]
+\usepackage{tabularx}
+\usepackage{amsmath} %formules mathématiques
+\usepackage{amssymb} %symboles mathématiques
+\usepackage{amsfonts} %polices mathématiques
+\usepackage{graphicx}
+\usepackage{wrapfig}%image à doite ou a gauche du texte
+\usepackage{tikz}
+\usepackage{multido}%pour la macro pointillés
+\usepackage[breakable]{tcolorbox}
+
+\usepackage{pstricks}%pour dessiner les champs électriques
+\usepackage{pst-electricfield}%pour dessiner les champs électriques
+
+%hyperliens
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks,
+  citecolor=black,
+  filecolor=black,
+  linkcolor=black,
+  urlcolor=black
+}
+
+
+%police
+%\usepackage{libertine} %la police
+\usepackage[T1]{fontenc}
+
+%cadre
+\usepackage{framed}
+
+%graphique tikz
+\usepackage{tkz-euclide}
+\usepackage{tkz-fct}
+
+%chemin vers les images
+\graphicspath{ {./images/} }
+
+%exercices xsim
+\usepackage[clear-aux]{xsim}
+\DeclareExerciseTagging{difficulty}
+\xsimsetup{
+  path=xsim,
+  load-style = layouts ,
+  exercise/template = runin ,
+  solution/template = runin,
+  difficulty={*,**,***},
+}
+
+
+
+%math
+\everymath{\displaystyle} %pour que les équations soient bien présentées
+
+
+%mise en page générale
+\KOMAoptions{DIV=last}
+\usepackage{setspace}%pour regler l'interligne
+\onehalfspacing %interligne1.5
+\setlength{\parindent}{0pt} %pas de retrait en début de paragraphe
+\usepackage{caption}%mise en forme des légendes des figures
+\addtokomafont{caption}{\scriptsize \itshape}
+\addtokomafont{captionlabel}{\scriptsize \itshape}
+
+%pieds de page utiliser scrlayer-scrpage
+\setkomafont{pageheadfoot}{\small}
+\lohead{} \rohead{} \cohead{}
+\lofoot{Électromagnétisme - physique(2h) - 6GT}
+\rofoot{Page \thepage}
+\cofoot{}
+
+
+%style perso et macro
+\definecolor{mygray1}{HTML}{e7e7e7}%light
+\definecolor{mygray2}{HTML}{676767}%lightdark
+\newcommand{\motcle}[1]{
+  \uppercase{\textbf{#1}}
+}
+
+\newcommand{\pointilles}[1]{
+  \begin{itemize}[label={}]
+    \multido{}{#1}{\item \dotfill}
+  \end{itemize}
+}
+
+\newenvironment{encadre}{\begin{center}\begin{minipage}[c]{0.8\linewidth}\begin{framed}}{\end{framed}\end{minipage}\end{center}}
+
+%\newcommand{\textgreek}[1]{\foreignlanguage{greek}{#1}}
+

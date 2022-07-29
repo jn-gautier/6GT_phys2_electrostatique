@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+\definecolor{NavyBlue}{HTML}{7279ff}
+\definecolor{DarkGreen}{HTML}{20ab2b}
+\definecolor{DarkRed}{HTML}{d40004}
+
+\tikzset{>=latex}
+%\tkzInit[xstep=1 , ystep=1]
+%\tkzInit[xmin=-2,xmax=2,ymin=-2,ymax=2]
+
+
+\tkzDefPoints{0/0/O, 1/0/A, 2.05/0/B, 2.35/0/C, 2.55/0/D}
+\tkzDefPoints{2/0/A', 2.288/0/B', 2.531/0/C', 2.704/0/D'}
+\tkzDrawSegments[->,ultra thin](A,A' B,B' C,C' D,D')
+
+\foreach \angle in {30,60,90,120,150,180,210,240,270,300,330,360}{
+\tkzDefPointBy[rotation=center O angle \angle](A)
+\tkzGetPoint{Q}
+\tkzDefPointBy[rotation=center O angle \angle](A')
+\tkzGetPoint{R}
+\tkzDrawSegment[->,color=DarkRed,thin](Q,R)
+
+\tkzDefPointBy[rotation=center O angle \angle](B)
+\tkzGetPoint{Q}
+\tkzDefPointBy[rotation=center O angle \angle](B')
+\tkzGetPoint{R}
+\tkzDrawSegment[->,color=DarkRed,thin](Q,R)
+
+\tkzDefPointBy[rotation=center O angle \angle](C)
+\tkzGetPoint{Q}
+\tkzDefPointBy[rotation=center O angle \angle](C')
+\tkzGetPoint{R}
+\tkzDrawSegment[->,color=DarkRed,thin](Q,R)
+
+\tkzDefPointBy[rotation=center O angle \angle](D)
+\tkzGetPoint{Q}
+\tkzDefPointBy[rotation=center O angle \angle](D')
+\tkzGetPoint{R}
+\tkzDrawSegment[->,color=DarkRed,thin](Q,R)
+
+}
+
+
+\tkzDrawPoint[shading=ball,ball color=green,size=10,draw=none](O)
+\tkzLabelPoint(O){\textbf{+q}}
+
+
+
+\end{tikzpicture} 
