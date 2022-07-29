@@ -4,6 +4,7 @@
 \usepackage[french]{babel}
 \usepackage[babel=true]{csquotes} % csquotes va utiliser la langue définie dans babel
 \usepackage[shortlabels]{enumitem} %permet de faire \begin{enumerate}[a)]
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tabularx}
 \usepackage{amsmath} %formules mathématiques
 \usepackage{amssymb} %symboles mathématiques
@@ -13,6 +14,27 @@
 \usepackage{tikz}
 \usepackage{multido}%pour la macro pointillés
 \usepackage[breakable]{tcolorbox}
+\tcbuselibrary{theorems}
+\tcbuselibrary{skins,listings}
+\newtcbtheorem[number within=section]{mytheo}{}%
+{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+
+\usepackage{siunitx}
+\sisetup{locale = FR}
+\usepackage{qrcode}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \usepackage{pstricks}%pour dessiner les champs électriques
 \usepackage{pst-electricfield}%pour dessiner les champs électriques
@@ -32,12 +54,11 @@
 %\usepackage{libertine} %la police
 \usepackage[T1]{fontenc}
 
-%cadre
-\usepackage{framed}
-
 %graphique tikz
-\usepackage{tkz-euclide}
+\usepackage{tikz}
+\usepackage{tkz-base}
 \usepackage{tkz-fct}
+\usepackage{tkz-euclide}
 
 %chemin vers les images
 \graphicspath{ {./images/} }
@@ -89,7 +110,6 @@
   \end{itemize}
 }
 
-\newenvironment{encadre}{\begin{center}\begin{minipage}[c]{0.8\linewidth}\begin{framed}}{\end{framed}\end{minipage}\end{center}}
-
+\newenvironment{encadre}{\begin{center}\begin{minipage}[c]{0.8\linewidth}\begin{tcolorbox}[colframe=red!50!yellow,colback=red!5!white]}{\end{tcolorbox}\end{minipage}\end{center}}
 %\newcommand{\textgreek}[1]{\foreignlanguage{greek}{#1}}
 
