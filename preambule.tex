@@ -38,6 +38,14 @@
 
 \usepackage{pstricks}%pour dessiner les champs électriques
 \usepackage{pst-electricfield}%pour dessiner les champs électriques
+%il y a un bug qui empeche la production des images pstricks
+% pour le corriger : modifier le fichier dvipdfmx.cfg
+%line 159, from
+%D  "rungs -q -dNOPAUSE -dBATCH ...
+%to
+%D  "rungs -q -dNOSAFER -dNOPAUSE -dBATCH ...
+%voir la discussion sur https://bbs.archlinux.org/viewtopic.php?id=250323
+%dans mon cas, le fichier était /usr/share/texlive/texmf-dist/tex/generic/pstricks/config/xdvipdfmx.cfg
 
 %hyperliens
 \usepackage{hyperref}
