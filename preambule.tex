@@ -2,6 +2,7 @@
 \RequirePackage{pdfmanagement-testphase}
 \DocumentMetadata {lang=fr}
 \documentclass[fontsize=11pt,twoside=true,DIV=calc,parskip=half]{scrbook}
+\usepackage[document]{ragged2e}
 \usepackage{scrhack}
 \usepackage{scrlayer-scrpage} %équivalent de fancyhdr pour kommascript
 \usepackage[french]{babel}
@@ -15,8 +16,13 @@
 \usepackage{graphicx}
 \usepackage{wrapfig}%image à doite ou a gauche du texte
 \usepackage{tikz}
+\usetikzlibrary{external}
+\tikzexternalize[prefix=./externalized/] %necessary to activate the externalization
+\tikzset{/tikz/external/only named={true}}
 \usepackage{multido}%pour la macro pointillés
 \usepackage[breakable]{tcolorbox}
+%\tcbset{shield externalize}
+\tcbsetforeverylayer{shield externalize}
 \tcbuselibrary{theorems}
 \tcbuselibrary{skins,listings}
 \newtcbtheorem[number within=section]{mytheo}{}%
@@ -36,11 +42,11 @@
 
 
 
+\usepackage{pgfplots}
 
 
-
-\usepackage{pstricks}%pour dessiner les champs électriques
-\usepackage{pst-electricfield}%pour dessiner les champs électriques
+%\usepackage{pstricks}%pour dessiner les champs électriques
+%\usepackage{pst-electricfield}%pour dessiner les champs électriques
 %il y a un bug qui empeche la production des images pstricks
 % pour le corriger : modifier le fichier dvipdfmx.cfg
 %line 159, from

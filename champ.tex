@@ -7,6 +7,15 @@ La loi de Coulomb est très utile, elle permet de calculer les caractéristiques
 
 Pour résoudre ces problèmes, Michael Faraday développe une idée particulièrement féconde : celle de \motcle{champ électrique}. Cette notion sera plus tard appliquée à d'autres domaines de la physique : champ de gravité, champ magnétique, champ de Higgs \ldots
 
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.35\linewidth]{faraday_and_cie.jpg}
+    \caption{Michael Faraday, Thomas Henry Huxley, Charles Wheatstone, David Brewster et John Tyndall.}
+    \label{club5}
+\end{figure}
+
+
+\newpage
 
 \section{Notion de champ}
 Lorsqu'un radiateur est placé dans un local, il va progressivement réchauffer le local et modifier la température en chaque point de l'espace.
@@ -15,19 +24,19 @@ Lorsqu'une valeur est définie partout dans un espace ou un plan on parle de cha
 
 \begin{figure}[!ht]
     \centering
-    \begin{minipage}[b]{.47\linewidth}
-        \centering
-        \includegraphics[width=.8\linewidth]{champ_temperature.jpg}
-        \caption{Représentation d'un champ de température}
-        \label{champ_temperature}
-    \end{minipage}
-    \begin{minipage}[b]{.47\linewidth}
-        \centering
-        \includegraphics[width=.5\linewidth]{carte_meteo.png}
-        \caption{Les cartes météo présentent souvent les champs de température et de pression.}
-        \label{carte_meteo}
-    \end{minipage}
+    \centering
+    \includegraphics[width=.6\linewidth]{champ_temperature.jpg}
+    \caption{Représentation d'un champ de température}
+    \label{champ_temperature}
 \end{figure}
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=.6\linewidth]{carte_meteo.png}
+    \caption{Les cartes météo présentent souvent les champs de température et de pression.}
+    \label{carte_meteo}
+\end{figure}
+
+
 
 
 \newpage
@@ -53,12 +62,7 @@ Par conséquent, la valeur du champ créé par une charge dans l'espace qui l'en
     \end{itemize}
 \end{encadre}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.35\linewidth]{faraday_and_cie.jpg}
-    \caption{Michael Faraday, Thomas Henry Huxley, Charles Wheatstone, David Brewster et John Tyndall.}
-    \label{club5}
-\end{figure}
+
 
 \newpage
 
@@ -104,7 +108,7 @@ La représentation par lignes de champ permet de se faire une idée de l'aspect 
 \begin{figure}[!ht]
     \centering
     \resizebox{.6\linewidth}{!}{\input{./tikz/lignes_champ.tikz}}
-    \caption{Représentation du champ par équipotentielles (en bleu) et lignes de champ (en rouge).}
+    \caption{Représentation du champ par équipotentielles (en rouge) et lignes de champ (en bleu).}
     \label{equipotentielle}
 \end{figure}
 
@@ -112,16 +116,18 @@ La représentation par lignes de champ permet de se faire une idée de l'aspect 
 
 \begin{figure}[!ht]
     \centering
-    \begin{minipage}[b]{.4\linewidth}
+    \begin{minipage}[b]{.49\linewidth}
         \centering
-        %\resizebox{.9\linewidth}{!}{\input{./tikz/champ_pos_neg.pstricks}}
-        \caption{Lignes de champ (en rouge) et équipotentielles (en bleu) entre deux charges de signes opposés.}
+        \tikzsetnextfilename{champ_pos_neg}
+        \resizebox{\linewidth}{!}{\input{./tikz/champ_pos_neg.tikz}}
+        \caption{Lignes de champ (en bleu) entre deux charges de signes opposés.}
         \label{champ_pos_neg}
     \end{minipage}
-    \begin{minipage}[b]{.4\linewidth}
+    \begin{minipage}[b]{.49\linewidth}
         \centering
-        %\resizebox{.9\linewidth}{!}{\input{./tikz/champ_pos_pos.pstricks}}
-        \caption{Lignes de champ (en rouge) et équipotentielles (en bleu) entre deux charges de mêmes signes.}
+        \tikzsetnextfilename{champ_pos_pos}
+        \resizebox{\linewidth}{!}{\input{./tikz/champ_pos_pos.tikz}}
+        \caption{Lignes de champ (en bleu) entre deux charges de mêmes signes.}
         \label{champ_pos_pos}
     \end{minipage}
 \end{figure}
@@ -130,8 +136,9 @@ La représentation par lignes de champ permet de se faire une idée de l'aspect 
 
 \begin{figure}[!ht]
     \centering
-    %\resizebox{.7\linewidth}{!}{\input{./tikz/six_charges.pstricks}}
-    \caption{Lignes de champ et équipotentielles entre six charges positives entourant une charge négative.}
+    \tikzsetnextfilename{champ_six_charges}
+    \resizebox{.7\linewidth}{!}{\input{./tikz/six_charges.tikz}}
+    \caption{Lignes de champ entre six charges positives entourant une charge négative.}
     \label{six_charges}
 \end{figure}
 
@@ -159,9 +166,4 @@ La représentation par lignes de champ permet de se faire une idée de l'aspect 
     Détermine les caractéristiques du champ électrique au sommet d'un triangle équilatéral de \(10[cm]\) de côté si les deux autres sommets sont occupés par une charge de \(6 \times 10^{-7}[C]\)
 \end{exercise}
 
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=0.4\linewidth]{charles_coulomb.png}
-    \caption{Charles-Augustin Coulomb(1736 - 1806).}
-    \label{charles_coulomb}
-\end{figure}
+
